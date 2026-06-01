@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleaze Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__logo">Sleaze Vault</div>
+            <div class="burger-menu" id="burger-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#hero" class="nav__link">Главная</a>
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#podbori" class="nav__link">Каталог</a>
+                <a href="#favorites" class="nav__link">Избранное</a>
+                <a href="#cart" class="nav__link">Корзина</a>
+                <a href="#orders" class="nav__link">Заказы</a>
+                <a href="#support" class="nav__link">Поддержка</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Sleaze Vault</h1>
+            <p class="hero__subtitle">Indie sleaze • Model Off Duty • Премиум секонд-хенд</p>
+            <a href="#podbori" class="hero__cta scroll-link">Смотреть каталог</a>
+        </div>
+    </section>
+
+    <!-- О НАС -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">О нас</h2>
+            <div class="about__grid">
+                <div class="about__image">
+                    <img src="images/about.jpg" alt="О нас">
+                </div>
+                <div class="about__text">
+                    <p>Sleaze Vault — это премиальный селективный секонд-хенд, где каждая вещь отбирается вручную с особой тщательностью. Мы ищем не просто одежду, а характер: то, что несёт в себе дух Indie Sleaze, Model Off Duty и дерзких ранних нулевых.</p>
+                    <p>Здесь нет фастфэшена. Только уникальные находки — от потёртых кожаных курток и прозрачных топов до винтажных митенок и жемчужных серёжек, которые выглядят так, будто их только что сняли с героини культового Tumblr-блога 2012 года.</p>
+                    <p>Мы верим, что настоящая эстетика рождается не в масс-маркете, а в вещах с историей. Каждую позицию мы проверяем на подлинность и качество, чистим и приводим в идеальное состояние, чтобы вы получили готовый лук прямо из коробки.</p>
+                    <p>Sleaze Vault — особое место в Петербурге, где собираются те, кто понимает: быть неидеальной — это и есть самый главный шик.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КАТАЛОГ -->
+    <section class="section favorites" id="podbori">
+        <div class="container">
+            <h2 class="section-title">Каталог</h2>
+            <div class="catalog-filters" aria-label="Фильтр каталога">
+                <button class="catalog-filter active" type="button" data-filter="all" aria-pressed="true">Все</button>
+                <button class="catalog-filter" type="button" data-filter="clothes" aria-pressed="false">Одежда</button>
+                <button class="catalog-filter" type="button" data-filter="shoes" aria-pressed="false">Обувь</button>
+                <button class="catalog-filter" type="button" data-filter="accessories" aria-pressed="false">Аксессуары</button>
+            </div>
+            <div class="favorites__grid">
+                <!-- Все товары из оригинального избранного -->
+                <div class="favorites__card" data-id="boot-1" data-category="shoes" tabindex="0" role="button" aria-label="Открыть описание товара Ботильоны">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav1.jpg" alt="Ботильоны">
+                        <button class="to-cart-btn" data-price="40 000 ₽" data-size="38" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Ботильоны</div>
+                </div>
+                <div class="favorites__card" data-id="bag-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Сумка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav2.jpg" alt="Сумка">
+                        <button class="to-cart-btn" data-price="95 000 ₽" data-size="L" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Сумка</div>
+                </div>
+                <div class="favorites__card" data-id="skirt-1" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Юбка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav3.jpg" alt="Юбка">
+                        <button class="to-cart-btn" data-price="28 500 ₽" data-size="S" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Юбка</div>
+                </div>
+                <div class="favorites__card" data-id="jacket-1" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Куртка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav4.jpg" alt="Куртка">
+                        <button class="to-cart-btn" data-price="95 000 ₽" data-size="S" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Куртка</div>
+                </div>
+                <div class="favorites__card" data-id="glasses-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Очки">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav5.jpg" alt="Очки">
+                        <button class="to-cart-btn" data-price="15 000 ₽" data-size="one size" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Очки</div>
+                </div>
+                <div class="favorites__card" data-id="jacket-2" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Куртка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav6.jpg" alt="Куртка">
+                        <button class="to-cart-btn" data-price="102 500 ₽" data-size="S" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Куртка</div>
+                </div>
+                <div class="favorites__card" data-id="dress-1" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Платье">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav7.jpg" alt="Платье">
+                        <button class="to-cart-btn" data-price="33 000 ₽" data-size="XS" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Платье</div>
+                </div>
+                <div class="favorites__card" data-id="belt-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Ремень">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav8.jpg" alt="Ремень">
+                        <button class="to-cart-btn" data-price="10 000 ₽" data-size="S" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Ремень</div>
+                </div>
+                <div class="favorites__card" data-id="bag-2" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Сумка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav9.jpg" alt="Сумка">
+                        <button class="to-cart-btn" data-price="75 000 ₽" data-size="L" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Сумка</div>
+                </div>
+                <div class="favorites__card" data-id="gloves-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Митенки">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav10.jpg" alt="Митенки">
+                        <button class="to-cart-btn" data-price="25 000 ₽" data-size="7" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Митенки</div>
+                </div>
+                <div class="favorites__card" data-id="jeans-1" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Джинсы">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav11.jpg" alt="Джинсы">
+                        <button class="to-cart-btn" data-price="17 000 ₽" data-size="29" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Джинсы</div>
+                </div>
+                <div class="favorites__card" data-id="cap-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Кепи">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/fav12.jpg" alt="Кепи">
+                        <button class="to-cart-btn" data-price="25 000 ₽" data-size="one size" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Кепи</div>
+                </div>
+
+                <!-- Товары из корзины и заказов -->
+                <div class="favorites__card" data-id="gloves-2" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Митенки">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/cart1.jpg" alt="Митенки">
+                        <button class="to-cart-btn" data-price="22 000 ₽" data-size="7" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Митенки</div>
+                </div>
+                <div class="favorites__card" data-id="boot-2" data-category="shoes" tabindex="0" role="button" aria-label="Открыть описание товара Сапоги">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/cart2.jpg" alt="Сапоги">
+                        <button class="to-cart-btn" data-price="55 000 ₽" data-size="38" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Сапоги</div>
+                </div>
+                <div class="favorites__card" data-id="jacket-3" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Жакет">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/cart3.jpg" alt="Жакет">
+                        <button class="to-cart-btn" data-price="105 500 ₽" data-size="М" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Жакет</div>
+                </div>
+                <div class="favorites__card" data-id="bracelet-1" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Браслет">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/order1.jpg" alt="Браслет">
+                        <button class="to-cart-btn" data-price="8 500 ₽" data-size="one size" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Браслет</div>
+                </div>
+                <div class="favorites__card" data-id="top-1" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Топ">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/order2.jpg" alt="Топ">
+                        <button class="to-cart-btn" data-price="18 000 ₽" data-size="S" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Топ</div>
+                </div>
+                <div class="favorites__card" data-id="bag-3" data-category="accessories" tabindex="0" role="button" aria-label="Открыть описание товара Сумка">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/order3.jpg" alt="Сумка">
+                        <button class="to-cart-btn" data-price="60 000 ₽" data-size="L" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Сумка</div>
+                </div>
+                <div class="favorites__card" data-id="top-2" data-category="clothes" tabindex="0" role="button" aria-label="Открыть описание товара Топ">
+                    <div class="favorites__image-wrapper">
+                        <img src="images/order4.jpg" alt="Топ">
+                        <button class="to-cart-btn" data-price="22 000 ₽" data-size="M" aria-label="Добавить в корзину">🛒</button>
+                        <button class="to-fav-btn" aria-label="Добавить в избранное">♡</button>
+                    </div>
+                    <div class="favorites__title">Топ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИЗБРАННОЕ -->
+    <section class="section favorites" id="favorites">
+    <div class="container">
+        <h2 class="section-title section-title--with-count">Избранное <span class="section-count" id="favoritesCount">0</span></h2>
+
+        <div class="favorites__empty" id="favoritesEmpty">
+            <div class="empty-state__icon">♡</div>
+            <div class="empty-state__title">Здесь пока пусто</div>
+            <p class="empty-state__text">Сохраняйте понравившиеся вещи, чтобы быстро возвращаться к ним позже.</p>
+        </div>
+
+        <div class="favorites__grid"></div>
+    </div>
+</section>
+
+    <!-- КОРЗИНА, ЗАКАЗЫ, FOOTER — без изменений -->
+    <section class="section cart" id="cart">
+        <div class="container">
+            <h2 class="section-title section-title--with-count">Корзина <span class="section-count" id="cartCount">0</span></h2>
+            <div class="cart__wrapper">
+                <div class="cart__list">
+                    <label class="cart__select-all">
+                        <input type="checkbox" id="selectAll" checked> Выбрать все
+                    </label>
+
+                    <div class="cart__item" data-id="gloves-2">
+                        <input type="checkbox" class="cart-item" checked>
+                        <img src="images/cart1.jpg" alt="Митенки" class="cart__item-img">
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Митенки</div>
+                            <div class="cart__item-meta">Размер: 7</div>
+                            <div class="cart__item-meta price">22 000 ₽</div>
+                        </div>
+                        <div class="cart__actions">
+                            <button class="to-fav-btn" aria-label="В избранное">♡</button>
+                            <button class="delete-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                    </div>
+                    <div class="cart__item" data-id="boot-2">
+                        <input type="checkbox" class="cart-item" checked>
+                        <img src="images/cart2.jpg" alt="Сапоги" class="cart__item-img">
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Сапоги</div>
+                            <div class="cart__item-meta">Размер: 38</div>
+                            <div class="cart__item-meta price">55 000 ₽</div>
+                        </div>
+                        <div class="cart__actions">
+                            <button class="to-fav-btn" aria-label="В избранное">♡</button>
+                            <button class="delete-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                    </div>
+                    <div class="cart__item" data-id="jacket-3">
+                        <input type="checkbox" class="cart-item" checked>
+                        <img src="images/cart3.jpg" alt="Жакет" class="cart__item-img">
+                        <div class="cart__item-info">
+                            <div class="cart__item-title">Жакет</div>
+                            <div class="cart__item-meta">Размер: М</div>
+                            <div class="cart__item-meta price">105 500 ₽</div>
+                        </div>
+                        <div class="cart__actions">
+                            <button class="to-fav-btn" aria-label="В избранное">♡</button>
+                            <button class="delete-btn" aria-label="Удалить">🗑</button>
+                        </div>
+                    </div>
+                    <div class="cart__empty" id="cartEmpty">
+                        <div class="empty-state__icon">👜</div>
+                        <div class="empty-state__title">В корзине пока пусто</div>
+                        <p class="empty-state__text">Добавьте вещи из каталога или избранного, и они появятся здесь.</p>
+                    </div>
+                </div>
+                <div class="cart__sidebar">
+                    <div style="font-size:15px;color:#666;">Сумма заказа</div>
+                    <div class="cart__total">Итого: <span id="totalPrice">0 ₽</span></div>
+                    <p style="font-size:14px;color:#666;margin-bottom:24px;">
+                        Товаров: <span id="totalCount">0</span><br>
+                        *Без учета возможной стоимости доставки
+                    </p>
+                    <button class="cart__checkout">Перейти к оформлению</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section orders" id="orders">
+        <div class="container">
+            <h2 class="section-title section-title--with-count">Заказы <span class="section-count" id="ordersCount">0</span></h2>
+            <div class="orders__list" id="ordersList">
+                <div class="orders__card">
+                    <div class="orders__header">
+                        <span>Доставлен</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="orders__items">
+                        <img src="images/order1.jpg" alt="Браслет" class="orders__item-img">
+                    </div>
+                    <button class="orders__btn" type="button">Смотреть заказ</button>
+                </div>
+                <div class="orders__card">
+                    <div class="orders__header">
+                        <span>Доставлен</span>
+                        <span class="arrow">→</span>
+                    </div>
+                    <div class="orders__items">
+                        <img src="images/order2.jpg" alt="Топ" class="orders__item-img">
+                        <img src="images/order3.jpg" alt="Сумка" class="orders__item-img">
+                        <img src="images/order4.jpg" alt="Топ" class="orders__item-img">
+                    </div>
+                    <button class="orders__btn" type="button">Смотреть заказ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="support" role="contentinfo">
+        <div class="footer__grid">
+            <div>
+                <h2 class="footer__title">Поддержка</h2>
+                <h2 class="footer__title">FAQ</h2>
+            </div>
+            <div class="footer__text">
+                Мы всегда на связи и готовы помочь.<br><br>
+                По всем вопросам по заказам, доставке, возврату и обмену звоните или пишите нам в Telegram, VK или на почту.<br><br>
+                Работаем только с проверенными курьерскими службами. Доставка по России и СНГ. Возврат в течение 14 дней при сохранении бирки и товарного вида.
+            </div>
+            <div>
+                <div class="footer__title">Контакты</div>
+                <div class="footer__contact">+7 (918) 753-07-73</div>
+                <div class="footer__contact">@sleazevault</div>
+                <div class="footer__contact">support@sleazevault.com</div>
+                <div class="footer__contact">м. Пушкинская</div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            © 2026 Sleaze Vault. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+<div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="product-modal__content">
+        <button class="product-modal__close" id="closeModal" type="button" aria-label="Закрыть окно">✕</button>
+
+        <div class="product-modal__grid">
+            <div class="product-modal__media">
+                <h2 class="product-modal__title" id="modalTitle"></h2>
+                <div class="modal-image-wrapper">
+                    <img id="modalImage" src="" alt="">
+                </div>
+            </div>
+
+            <div class="product-modal__info">
+                <p class="price" id="modalPrice"></p>
+                <p class="size" id="modalSize"></p>
+
+                <p class="product-modal__description" id="modalDescription">
+                    Винтажная находка с выразительным силуэтом и мягким настроением indie sleaze.
+                </p>
+
+                <div class="product-modal__facts">
+                    <div class="product-modal__fact"><span>Материал</span><strong id="modalMaterial">Винтажный микс</strong></div>
+                    <div class="product-modal__fact"><span>Состояние</span><strong id="modalCondition">Отличное</strong></div>
+                </div>
+
+                <p class="product-modal__note" id="modalNote">
+                    Подходит для layered-образа и легко собирается с базовыми вещами.
+                </p>
+
+                <button class="modal-cart-btn">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="checkout-modal__content" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <button class="checkout-modal__close" id="checkoutClose" type="button" aria-label="Закрыть окно">✕</button>
+        <h2 id="checkoutTitle">Подтверждение заказа</h2>
+        <p class="checkout-modal__subtitle">Проверьте выбранные позиции перед оформлением.</p>
+        <div class="checkout-modal__items" id="checkoutItems"></div>
+        <div class="checkout-modal__summary">
+            <span>Итого</span>
+            <strong id="checkoutTotal">0 ₽</strong>
+        </div>
+        <button class="checkout-modal__confirm" id="checkoutConfirm" type="button">Оформить заказ</button>
+    </div>
+</div>
+
+<div class="order-modal" id="orderModal" aria-hidden="true">
+    <div class="order-modal__content" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <button class="order-modal__close" id="orderModalClose" type="button" aria-label="Закрыть окно">✕</button>
+        <div class="order-modal__eyebrow" id="orderModalStatus">Заказ</div>
+        <h2 id="orderModalTitle">Купленные товары</h2>
+        <div class="order-modal__items" id="orderModalItems"></div>
+        <div class="order-modal__summary">
+            <span>Итого</span>
+            <strong id="orderModalTotal">0 ₽</strong>
+        </div>
+    </div>
+</div>
+
+<div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+</html>
